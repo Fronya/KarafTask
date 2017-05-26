@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" name="features-karaftask">
+    <feature name="features-karaftask" version="1.0-SNAPSHOT" description="features-karaftask">
+        <bundle>mvn:javax.annotation/javax.annotation-api/1.2</bundle>
+        <bundle>mvn:com.fronya/karaftask-model/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.fronya/karaftask-server/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.fronya/karaftask-proxy/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.fronya/karaftask-client/1.0-SNAPSHOT</bundle>
+    </feature>
+</features>

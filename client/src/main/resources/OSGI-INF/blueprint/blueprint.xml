@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    <bean id="personServlet"
+          class="com.fronya.servlet.PersonServlet">
+        <property name="personService" ref="personService" />
+    </bean>
+
+    <reference id="personService"
+               interface="com.fronya.model.PersonService"/>
+
+    <service interface="javax.servlet.http.HttpServlet" ref="personServlet">
+        <service-properties>
+            <entry key="alias" value="/personclient" />
+        </service-properties>
+    </service>
+</blueprint>
