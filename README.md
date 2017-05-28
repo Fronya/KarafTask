@@ -12,3 +12,5 @@ http://localhost:8181/cxf/personServiceSoap - SOAP service
 http://localhost:8181/cxf/personServiceSoap?wsdl - wsdl
 
 http://localhost:8181/personclient - client for test service
+
++ add tests for class PersonServiceImpl 

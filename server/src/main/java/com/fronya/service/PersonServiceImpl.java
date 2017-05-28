@@ -15,9 +15,15 @@ public class PersonServiceImpl implements PersonService{
     public List<Person> getFriendsBornSameYear(Person person, int year) throws FriendNotFoundException {
         List<Person> friends = new ArrayList<>();
 
-        for (Person friend: person.getFriends()) {
-            if(friend.getBirthday().getYear() == year){
-                friends.add(friend);
+        Calendar currentBirthDayFriend = Calendar.getInstance();
+        if(person != null && person.getFriends() != null){
+            for (Person friend: person.getFriends()) {
+                if(friend != null){
+                    currentBirthDayFriend.setTime(friend.getBirthday());
+                    if(currentBirthDayFriend.get(Calendar.YEAR) == year){
+                        friends.add(friend);
+                    }
+                }
             }
         }
         if(friends.size() == 0){
